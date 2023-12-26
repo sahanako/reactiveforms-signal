@@ -1,0 +1,23 @@
+<form [formGroup]="profForm">
+  <p>Form 2</p>
+
+  <div>
+    <mat-form-field>
+        <mat-label>Enter your firstname</mat-label>
+        <input matInput type="text" #firstNameField [value]="firstName()" (input)="firstName.set(firstNameField.value)" formControlName="firstName">
+      </mat-form-field>
+</div>
+
+<div>
+    <mat-form-field>
+        <mat-label>Enter your lastname</mat-label>
+        <input matInput type="text" #lastNameField [value]="lastName()" (input)="lastName.set(lastNameField.value)" formControlName="lastName">
+      </mat-form-field>
+</div>
+    
+    <button mat-raised-button color="accent" (click)="adddata()">Submit</button>
+
+    <!-- <div>{{ fullName() }} </div> -->
+
+  </form>
+
